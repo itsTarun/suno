@@ -1,0 +1,15 @@
+// File: Production.xcconfig
+// Project: StreamCast
+
+// Created at 14/01/2021 by Liquidcoder
+// Visit https://www.liquidcoder.com for more
+// Copyright © Liquidcoder. All rights reserved
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_BUNDLE_IDENTIFIER = com.liquidcoder.StreamCast
+
+APP_NAME = StreamCast
+
+APP_ICON_NAME = AppIcon
