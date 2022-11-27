@@ -1,15 +1,10 @@
-// File: Staging.xcconfig
-// Project: StreamCast
+// Staging.xcconfig
+// StreamCast
 
-// Created at 14/01/2021 by Liquidcoder
-// Visit https://www.liquidcoder.com for more
-// Copyright © Liquidcoder. All rights reserved
+BASE_URL = https:/$()/itunes.apple.com/search
 
-// Configuration settings file format documentation can be found at:
-// https://help.apple.com/xcode/#/dev745c5c974
+APP_BUNDLE_IDENTIFIER = edu.self.suno.staging
 
-APP_BUNDLE_IDENTIFIER = com.liquidcoder.StreamCast.staging
-
-APP_NAME = StreamCast Staging
+APP_NAME = Suno Staging
 
 APP_ICON_NAME = AppIcon.staging

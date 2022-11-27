@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52A9AB6D25AFEF67008434FF"
-               BuildableName = "StreamCast.app"
+               BuildableName = "Suno.app"
                BlueprintName = "StreamCast (iOS)"
                ReferencedContainer = "container:StreamCast.xcodeproj">
             </BuildableReference>

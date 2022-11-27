@@ -1,7 +1,6 @@
 // StreamCastApp.swift
 // StreamCast
 
-
 import SwiftUI
 
 @main
