@@ -66,6 +66,24 @@
 		8D97CC6F2930B4F600668E94 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8D97CC6D2930B4F600668E94 /* .swiftlint.yml */; };
 		8D97CC702930B4F600668E94 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8D97CC6D2930B4F600668E94 /* .swiftlint.yml */; };
 		8D97CC732930BA4F00668E94 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D97CC722930BA4F00668E94 /* FeedKit */; };
+		8DE64C59293640F6005EB456 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C58293640F6005EB456 /* Log.swift */; };
+		8DE64C5A293640F6005EB456 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C58293640F6005EB456 /* Log.swift */; };
+		8DE64C5B293640F6005EB456 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C58293640F6005EB456 /* Log.swift */; };
+		8DE64C5E29364159005EB456 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C5D29364159005EB456 /* Action.swift */; };
+		8DE64C5F29364159005EB456 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C5D29364159005EB456 /* Action.swift */; };
+		8DE64C6029364159005EB456 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C5D29364159005EB456 /* Action.swift */; };
+		8DE64C62293641AF005EB456 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C61293641AF005EB456 /* GlobalState.swift */; };
+		8DE64C63293641AF005EB456 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C61293641AF005EB456 /* GlobalState.swift */; };
+		8DE64C64293641AF005EB456 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C61293641AF005EB456 /* GlobalState.swift */; };
+		8DE64C662936426D005EB456 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C652936426D005EB456 /* AppEnvironment.swift */; };
+		8DE64C672936426D005EB456 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C652936426D005EB456 /* AppEnvironment.swift */; };
+		8DE64C682936426D005EB456 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C652936426D005EB456 /* AppEnvironment.swift */; };
+		8DE64C6A29364295005EB456 /* ApiReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C6929364295005EB456 /* ApiReducer.swift */; };
+		8DE64C6B29364295005EB456 /* ApiReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C6929364295005EB456 /* ApiReducer.swift */; };
+		8DE64C6C29364295005EB456 /* ApiReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C6929364295005EB456 /* ApiReducer.swift */; };
+		8DE64C6E29364340005EB456 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C6D29364340005EB456 /* Store.swift */; };
+		8DE64C6F29364340005EB456 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C6D29364340005EB456 /* Store.swift */; };
+		8DE64C7029364340005EB456 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE64C6D29364340005EB456 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +149,12 @@
 		8D8B22AB293345AA0035D5F3 /* InternetMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetMonitor.swift; sourceTree = "<group>"; };
 		8D8B22AD293345AA0035D5F3 /* genres.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = genres.json; sourceTree = "<group>"; };
 		8D97CC6D2930B4F600668E94 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8DE64C58293640F6005EB456 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		8DE64C5D29364159005EB456 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		8DE64C61293641AF005EB456 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		8DE64C652936426D005EB456 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		8DE64C6929364295005EB456 /* ApiReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiReducer.swift; sourceTree = "<group>"; };
+		8DE64C6D29364340005EB456 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +201,8 @@
 		52A9AB6325AFEF66008434FF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8DE64C5C29364146005EB456 /* Store */,
+				8DE64C57293640D9005EB456 /* Utils */,
 				8D8B229E293345A90035D5F3 /* Extensions */,
 				8D8B22A5293345A90035D5F3 /* Models */,
 				8D8B22A8293345AA0035D5F3 /* Networking */,
@@ -314,6 +340,26 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DE64C57293640D9005EB456 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8DE64C58293640F6005EB456 /* Log.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8DE64C5C29364146005EB456 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				8DE64C5D29364159005EB456 /* Action.swift */,
+				8DE64C61293641AF005EB456 /* GlobalState.swift */,
+				8DE64C652936426D005EB456 /* AppEnvironment.swift */,
+				8DE64C6929364295005EB456 /* ApiReducer.swift */,
+				8DE64C6D29364340005EB456 /* Store.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,14 +529,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE64C6E29364340005EB456 /* Store.swift in Sources */,
 				8D8B22B1293345AA0035D5F3 /* Date+.swift in Sources */,
 				8D8B22B7293345AA0035D5F3 /* PodcastViewModel.swift in Sources */,
+				8DE64C62293641AF005EB456 /* GlobalState.swift in Sources */,
 				8D8B22C0293345AA0035D5F3 /* Podcast.swift in Sources */,
 				8D8B22C9293345AA0035D5F3 /* InternetMonitor.swift in Sources */,
+				8DE64C662936426D005EB456 /* AppEnvironment.swift in Sources */,
 				52A9AB7C25AFEF67008434FF /* StreamCastApp.swift in Sources */,
 				8D8B22BD293345AA0035D5F3 /* Genre.swift in Sources */,
+				8DE64C59293640F6005EB456 /* Log.swift in Sources */,
 				52A9AB8025AFEF67008434FF /* Persistence.swift in Sources */,
 				52A9AB7A25AFEF67008434FF /* StreamCast.xcdatamodeld in Sources */,
+				8DE64C5E29364159005EB456 /* Action.swift in Sources */,
 				8D8B22C3293345AA0035D5F3 /* ApiService.swift in Sources */,
 				8D8B22B4293345AA0035D5F3 /* GenreViewModel.swift in Sources */,
 				52A9AB7E25AFEF67008434FF /* ContentView.swift in Sources */,
@@ -498,6 +549,7 @@
 				8D8B22BA293345AA0035D5F3 /* EpisodeViewModel.swift in Sources */,
 				8D8B22C6293345AA0035D5F3 /* ApiServiceProtocol.swift in Sources */,
 				8D8B229B2933449E0035D5F3 /* ConfigParser.swift in Sources */,
+				8DE64C6A29364295005EB456 /* ApiReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,14 +557,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE64C6F29364340005EB456 /* Store.swift in Sources */,
 				8D8B22B2293345AA0035D5F3 /* Date+.swift in Sources */,
 				8D8B22B8293345AA0035D5F3 /* PodcastViewModel.swift in Sources */,
+				8DE64C63293641AF005EB456 /* GlobalState.swift in Sources */,
 				8D8B22C1293345AA0035D5F3 /* Podcast.swift in Sources */,
 				8D8B22CA293345AA0035D5F3 /* InternetMonitor.swift in Sources */,
+				8DE64C672936426D005EB456 /* AppEnvironment.swift in Sources */,
 				52A9AB7D25AFEF67008434FF /* StreamCastApp.swift in Sources */,
 				8D8B22BE293345AA0035D5F3 /* Genre.swift in Sources */,
+				8DE64C5A293640F6005EB456 /* Log.swift in Sources */,
 				52A9AB8125AFEF67008434FF /* Persistence.swift in Sources */,
 				52A9AB7B25AFEF67008434FF /* StreamCast.xcdatamodeld in Sources */,
+				8DE64C5F29364159005EB456 /* Action.swift in Sources */,
 				8D8B22C4293345AA0035D5F3 /* ApiService.swift in Sources */,
 				8D8B22B5293345AA0035D5F3 /* GenreViewModel.swift in Sources */,
 				52A9AB7F25AFEF67008434FF /* ContentView.swift in Sources */,
@@ -520,6 +577,7 @@
 				8D8B22BB293345AA0035D5F3 /* EpisodeViewModel.swift in Sources */,
 				8D8B22C7293345AA0035D5F3 /* ApiServiceProtocol.swift in Sources */,
 				8D8B229C2933449E0035D5F3 /* ConfigParser.swift in Sources */,
+				8DE64C6B29364295005EB456 /* ApiReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,17 +586,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A9ABA325AFF02F008434FF /* NotificationController.swift in Sources */,
+				8DE64C6029364159005EB456 /* Action.swift in Sources */,
+				8DE64C64293641AF005EB456 /* GlobalState.swift in Sources */,
+				8DE64C6C29364295005EB456 /* ApiReducer.swift in Sources */,
 				8D8B22CB293345AA0035D5F3 /* InternetMonitor.swift in Sources */,
 				52A9ABA125AFF02F008434FF /* ContentView.swift in Sources */,
+				8DE64C682936426D005EB456 /* AppEnvironment.swift in Sources */,
 				8D8B22C8293345AA0035D5F3 /* ApiServiceProtocol.swift in Sources */,
 				8D8B229D2933449E0035D5F3 /* ConfigParser.swift in Sources */,
 				8D8B22BF293345AA0035D5F3 /* Genre.swift in Sources */,
 				8D8B22BC293345AA0035D5F3 /* EpisodeViewModel.swift in Sources */,
 				52A9ABA725AFF02F008434FF /* ComplicationController.swift in Sources */,
+				8DE64C5B293640F6005EB456 /* Log.swift in Sources */,
 				8D8B22C2293345AA0035D5F3 /* Podcast.swift in Sources */,
 				8D8B22B6293345AA0035D5F3 /* GenreViewModel.swift in Sources */,
 				8D8B22B9293345AA0035D5F3 /* PodcastViewModel.swift in Sources */,
 				52A9AB9F25AFF02F008434FF /* StreamCastApp.swift in Sources */,
+				8DE64C7029364340005EB456 /* Store.swift in Sources */,
 				8D8B22B0293345AA0035D5F3 /* String+.swift in Sources */,
 				52A9ABA525AFF02F008434FF /* NotificationView.swift in Sources */,
 				8D8B22C5293345AA0035D5F3 /* ApiService.swift in Sources */,
