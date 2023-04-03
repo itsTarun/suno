@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DEE94DF29DAAF0000138417 /* SunoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE94DE29DAAF0000138417 /* SunoApp.swift */; };
+		8DEE94E329DAAF0100138417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE94E229DAAF0100138417 /* Assets.xcassets */; };
+		8DEE94E729DAAF0100138417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE94E629DAAF0100138417 /* Preview Assets.xcassets */; };
+		8DEE94F129DAAF0200138417 /* SunoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE94F029DAAF0200138417 /* SunoTests.swift */; };
+		8DEE94FB29DAAF0200138417 /* SunoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE94FA29DAAF0200138417 /* SunoUITests.swift */; };
+		8DEE94FD29DAAF0200138417 /* SunoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE94FC29DAAF0200138417 /* SunoUITestsLaunchTests.swift */; };
+		8DEE950C29DAB3CD00138417 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8DEE950B29DAB3CD00138417 /* FirebaseAnalytics */; };
+		8DEE950E29DAB3CD00138417 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8DEE950D29DAB3CD00138417 /* FirebaseAuth */; };
+		8DEE951029DAB3CD00138417 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8DEE950F29DAB3CD00138417 /* FirebaseFirestore */; };
+		8DEE951229DAB42B00138417 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE951129DAB42B00138417 /* GoogleService-Info.plist */; };
+		8DEE951829DADA7F00138417 /* Bhajan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE951729DADA7F00138417 /* Bhajan.swift */; };
+		8DEE951A29DADB4300138417 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE951929DADB4300138417 /* ListView.swift */; };
+		8DEE951D29DADDCA00138417 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE951C29DADDCA00138417 /* DataManager.swift */; };
+		8DEE952129DAE23800138417 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE952029DAE23800138417 /* SignUp.swift */; };
+		8DEE952329DAE38600138417 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE952229DAE38600138417 /* Home.swift */; };
+		8DEE952629DAE3A300138417 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE952529DAE3A300138417 /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DEE94ED29DAAF0200138417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DEE94D329DAAF0000138417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DEE94DA29DAAF0000138417;
+			remoteInfo = Suno;
+		};
+		8DEE94F729DAAF0200138417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DEE94D329DAAF0000138417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DEE94DA29DAAF0000138417;
+			remoteInfo = Suno;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8DEE94DB29DAAF0000138417 /* Suno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Suno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DEE94DE29DAAF0000138417 /* SunoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunoApp.swift; sourceTree = "<group>"; };
+		8DEE94E229DAAF0100138417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DEE94E429DAAF0100138417 /* Suno.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Suno.entitlements; sourceTree = "<group>"; };
+		8DEE94E629DAAF0100138417 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DEE94EC29DAAF0200138417 /* SunoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DEE94F029DAAF0200138417 /* SunoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunoTests.swift; sourceTree = "<group>"; };
+		8DEE94F629DAAF0200138417 /* SunoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DEE94FA29DAAF0200138417 /* SunoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunoUITests.swift; sourceTree = "<group>"; };
+		8DEE94FC29DAAF0200138417 /* SunoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DEE951129DAB42B00138417 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DEE951729DADA7F00138417 /* Bhajan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bhajan.swift; sourceTree = "<group>"; };
+		8DEE951929DADB4300138417 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		8DEE951C29DADDCA00138417 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8DEE952029DAE23800138417 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		8DEE952229DAE38600138417 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		8DEE952529DAE3A300138417 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DEE94D829DAAF0000138417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEE950C29DAB3CD00138417 /* FirebaseAnalytics in Frameworks */,
+				8DEE950E29DAB3CD00138417 /* FirebaseAuth in Frameworks */,
+				8DEE951029DAB3CD00138417 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DEE94E929DAAF0200138417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DEE94F329DAAF0200138417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8DEE94D229DAAF0000138417 = {
+			isa = PBXGroup;
+			children = (
+				8DEE94DD29DAAF0000138417 /* Suno */,
+				8DEE94EF29DAAF0200138417 /* SunoTests */,
+				8DEE94F929DAAF0200138417 /* SunoUITests */,
+				8DEE94DC29DAAF0000138417 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8DEE94DC29DAAF0000138417 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE94DB29DAAF0000138417 /* Suno.app */,
+				8DEE94EC29DAAF0200138417 /* SunoTests.xctest */,
+				8DEE94F629DAAF0200138417 /* SunoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DEE94DD29DAAF0000138417 /* Suno */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE951E29DAE18000138417 /* src */,
+				8DEE94E229DAAF0100138417 /* Assets.xcassets */,
+				8DEE94E429DAAF0100138417 /* Suno.entitlements */,
+				8DEE951129DAB42B00138417 /* GoogleService-Info.plist */,
+				8DEE94E529DAAF0100138417 /* Preview Content */,
+			);
+			path = Suno;
+			sourceTree = "<group>";
+		};
+		8DEE94E529DAAF0100138417 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE94E629DAAF0100138417 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DEE94EF29DAAF0200138417 /* SunoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE94F029DAAF0200138417 /* SunoTests.swift */,
+			);
+			path = SunoTests;
+			sourceTree = "<group>";
+		};
+		8DEE94F929DAAF0200138417 /* SunoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE94FA29DAAF0200138417 /* SunoUITests.swift */,
+				8DEE94FC29DAAF0200138417 /* SunoUITestsLaunchTests.swift */,
+			);
+			path = SunoUITests;
+			sourceTree = "<group>";
+		};
+		8DEE951529DADA6200138417 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE951729DADA7F00138417 /* Bhajan.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DEE951629DADA6700138417 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE951929DADB4300138417 /* ListView.swift */,
+				8DEE952029DAE23800138417 /* SignUp.swift */,
+				8DEE952229DAE38600138417 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DEE951B29DADDC000138417 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE951C29DADDCA00138417 /* DataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8DEE951E29DAE18000138417 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE952429DAE39A00138417 /* Extension */,
+				8DEE951B29DADDC000138417 /* Manager */,
+				8DEE951629DADA6700138417 /* View */,
+				8DEE951529DADA6200138417 /* Model */,
+				8DEE951F29DAE18700138417 /* app */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		8DEE951F29DAE18700138417 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE94DE29DAAF0000138417 /* SunoApp.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		8DEE952429DAE39A00138417 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE952529DAE3A300138417 /* Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DEE94DA29DAAF0000138417 /* Suno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DEE950029DAAF0200138417 /* Build configuration list for PBXNativeTarget "Suno" */;
+			buildPhases = (
+				8DEE94D729DAAF0000138417 /* Sources */,
+				8DEE94D829DAAF0000138417 /* Frameworks */,
+				8DEE94D929DAAF0000138417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Suno;
+			packageProductDependencies = (
+				8DEE950B29DAB3CD00138417 /* FirebaseAnalytics */,
+				8DEE950D29DAB3CD00138417 /* FirebaseAuth */,
+				8DEE950F29DAB3CD00138417 /* FirebaseFirestore */,
+			);
+			productName = Suno;
+			productReference = 8DEE94DB29DAAF0000138417 /* Suno.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8DEE94EB29DAAF0200138417 /* SunoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DEE950329DAAF0200138417 /* Build configuration list for PBXNativeTarget "SunoTests" */;
+			buildPhases = (
+				8DEE94E829DAAF0200138417 /* Sources */,
+				8DEE94E929DAAF0200138417 /* Frameworks */,
+				8DEE94EA29DAAF0200138417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DEE94EE29DAAF0200138417 /* PBXTargetDependency */,
+			);
+			name = SunoTests;
+			productName = SunoTests;
+			productReference = 8DEE94EC29DAAF0200138417 /* SunoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8DEE94F529DAAF0200138417 /* SunoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DEE950629DAAF0200138417 /* Build configuration list for PBXNativeTarget "SunoUITests" */;
+			buildPhases = (
+				8DEE94F229DAAF0200138417 /* Sources */,
+				8DEE94F329DAAF0200138417 /* Frameworks */,
+				8DEE94F429DAAF0200138417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DEE94F829DAAF0200138417 /* PBXTargetDependency */,
+			);
+			name = SunoUITests;
+			productName = SunoUITests;
+			productReference = 8DEE94F629DAAF0200138417 /* SunoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DEE94D329DAAF0000138417 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8DEE94DA29DAAF0000138417 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					8DEE94EB29DAAF0200138417 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 8DEE94DA29DAAF0000138417;
+					};
+					8DEE94F529DAAF0200138417 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 8DEE94DA29DAAF0000138417;
+					};
+				};
+			};
+			buildConfigurationList = 8DEE94D629DAAF0000138417 /* Build configuration list for PBXProject "Suno" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DEE94D229DAAF0000138417;
+			packageReferences = (
+				8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 8DEE94DC29DAAF0000138417 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DEE94DA29DAAF0000138417 /* Suno */,
+				8DEE94EB29DAAF0200138417 /* SunoTests */,
+				8DEE94F529DAAF0200138417 /* SunoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DEE94D929DAAF0000138417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEE94E729DAAF0100138417 /* Preview Assets.xcassets in Resources */,
+				8DEE94E329DAAF0100138417 /* Assets.xcassets in Resources */,
+				8DEE951229DAB42B00138417 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DEE94EA29DAAF0200138417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DEE94F429DAAF0200138417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DEE94D729DAAF0000138417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEE951A29DADB4300138417 /* ListView.swift in Sources */,
+				8DEE952129DAE23800138417 /* SignUp.swift in Sources */,
+				8DEE951D29DADDCA00138417 /* DataManager.swift in Sources */,
+				8DEE952629DAE3A300138417 /* Extensions.swift in Sources */,
+				8DEE951829DADA7F00138417 /* Bhajan.swift in Sources */,
+				8DEE94DF29DAAF0000138417 /* SunoApp.swift in Sources */,
+				8DEE952329DAE38600138417 /* Home.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DEE94E829DAAF0200138417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEE94F129DAAF0200138417 /* SunoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DEE94F229DAAF0200138417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEE94FB29DAAF0200138417 /* SunoUITests.swift in Sources */,
+				8DEE94FD29DAAF0200138417 /* SunoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DEE94EE29DAAF0200138417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DEE94DA29DAAF0000138417 /* Suno */;
+			targetProxy = 8DEE94ED29DAAF0200138417 /* PBXContainerItemProxy */;
+		};
+		8DEE94F829DAAF0200138417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DEE94DA29DAAF0000138417 /* Suno */;
+			targetProxy = 8DEE94F729DAAF0200138417 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8DEE94FE29DAAF0200138417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DEE94FF29DAAF0200138417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8DEE950129DAAF0200138417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Suno/Suno.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Suno/Preview Content\"";
+				DEVELOPMENT_TEAM = H4RJQKYBP9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = droidsize.com.Suno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DEE950229DAAF0200138417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Suno/Suno.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Suno/Preview Content\"";
+				DEVELOPMENT_TEAM = H4RJQKYBP9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = droidsize.com.Suno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8DEE950429DAAF0200138417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H4RJQKYBP9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = droidsize.com.SunoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Suno.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Suno";
+			};
+			name = Debug;
+		};
+		8DEE950529DAAF0200138417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H4RJQKYBP9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = droidsize.com.SunoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Suno.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Suno";
+			};
+			name = Release;
+		};
+		8DEE950729DAAF0200138417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H4RJQKYBP9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = droidsize.com.SunoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Suno;
+			};
+			name = Debug;
+		};
+		8DEE950829DAAF0200138417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H4RJQKYBP9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = droidsize.com.SunoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Suno;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DEE94D629DAAF0000138417 /* Build configuration list for PBXProject "Suno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DEE94FE29DAAF0200138417 /* Debug */,
+				8DEE94FF29DAAF0200138417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DEE950029DAAF0200138417 /* Build configuration list for PBXNativeTarget "Suno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DEE950129DAAF0200138417 /* Debug */,
+				8DEE950229DAAF0200138417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DEE950329DAAF0200138417 /* Build configuration list for PBXNativeTarget "SunoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DEE950429DAAF0200138417 /* Debug */,
+				8DEE950529DAAF0200138417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DEE950629DAAF0200138417 /* Build configuration list for PBXNativeTarget "SunoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DEE950729DAAF0200138417 /* Debug */,
+				8DEE950829DAAF0200138417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DEE950B29DAB3CD00138417 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8DEE950D29DAB3CD00138417 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8DEE950F29DAB3CD00138417 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8DEE94D329DAAF0000138417 /* Project object */;
+}
