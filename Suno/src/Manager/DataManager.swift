@@ -34,7 +34,7 @@ class DataManager: ObservableObject {
                     let lrc = data["lrc"] as? String ?? ""
                     let name = data["name"] as? String ?? ""
                     
-                    let bhajan = Bhajan(id: id, image: image, url: url, lrc: lrc, name: name)
+                    let bhajan = Bhajan(id: id, image: image, url: url, lrc: lrc, name: name, time: "00:47", file: url, duration: 130, year: "2023")
                     self.bhajans.append(bhajan)
                 }
             }
