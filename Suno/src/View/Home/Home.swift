@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct Home: View {
-    @State private var userLoggedIn = false
+    @AppStorage(UserDefaultKeys.isLoggedIn.rawValue) var isLogin: Bool = false
     @EnvironmentObject var dataManager: DataManager
     var body: some View {
-        if userLoggedIn {
-            VStack {
-                ListView()
-            }
+        if isLogin {
+            ListView()
+                .environmentObject(dataManager)
         } else {
-            SignUp(action: {
-                userLoggedIn.toggle()
-            })
-            .environmentObject(dataManager)
+            Login()
         }
     }
 }
@@ -27,5 +23,6 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .environmentObject(DataManager())
     }
 }

@@ -14,3 +14,8 @@ struct Bhajan: Identifiable {
     var lrc: String
     var name: String
 }
+
+enum UserDefaultKeys: String {
+    case isLoggedIn = "isLoggedIn"
+    case verificationId = "verificationId"
+}

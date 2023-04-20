@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2DEFA629F160E90049661C /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DEFA329F160E90049661C /* Verification.swift */; };
+		8D2DEFA729F160E90049661C /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DEFA429F160E90049661C /* Done.swift */; };
+		8D2DEFA829F160E90049661C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DEFA529F160E90049661C /* Login.swift */; };
+		8D2DEFAB29F161900049661C /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2DEFAA29F161900049661C /* SwiftUIX */; };
+		8D2DEFAD29F161CA0049661C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DEFAC29F161CA0049661C /* LoginViewModel.swift */; };
 		8DEE94DF29DAAF0000138417 /* SunoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE94DE29DAAF0000138417 /* SunoApp.swift */; };
 		8DEE94E329DAAF0100138417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE94E229DAAF0100138417 /* Assets.xcassets */; };
 		8DEE94E729DAAF0100138417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE94E629DAAF0100138417 /* Preview Assets.xcassets */; };
@@ -20,7 +25,6 @@
 		8DEE951829DADA7F00138417 /* Bhajan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE951729DADA7F00138417 /* Bhajan.swift */; };
 		8DEE951A29DADB4300138417 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE951929DADB4300138417 /* ListView.swift */; };
 		8DEE951D29DADDCA00138417 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE951C29DADDCA00138417 /* DataManager.swift */; };
-		8DEE952129DAE23800138417 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE952029DAE23800138417 /* SignUp.swift */; };
 		8DEE952329DAE38600138417 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE952229DAE38600138417 /* Home.swift */; };
 		8DEE952629DAE3A300138417 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE952529DAE3A300138417 /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D2DEFA329F160E90049661C /* Verification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		8D2DEFA429F160E90049661C /* Done.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Done.swift; sourceTree = "<group>"; };
+		8D2DEFA529F160E90049661C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8D2DEFAC29F161CA0049661C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8D2DEFAE29F161F70049661C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DEE94DB29DAAF0000138417 /* Suno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Suno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEE94DE29DAAF0000138417 /* SunoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunoApp.swift; sourceTree = "<group>"; };
 		8DEE94E229DAAF0100138417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +66,6 @@
 		8DEE951729DADA7F00138417 /* Bhajan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bhajan.swift; sourceTree = "<group>"; };
 		8DEE951929DADB4300138417 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		8DEE951C29DADDCA00138417 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		8DEE952029DAE23800138417 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		8DEE952229DAE38600138417 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		8DEE952529DAE3A300138417 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +78,7 @@
 				8DEE950C29DAB3CD00138417 /* FirebaseAnalytics in Frameworks */,
 				8DEE950E29DAB3CD00138417 /* FirebaseAuth in Frameworks */,
 				8DEE951029DAB3CD00138417 /* FirebaseFirestore in Frameworks */,
+				8D2DEFAB29F161900049661C /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +99,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0FB3DC29F1706200FEE524 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE952229DAE38600138417 /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8D0FB3DD29F1706F00FEE524 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE951929DADB4300138417 /* ListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8D2DEFA229F160DE0049661C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8D2DEFA429F160E90049661C /* Done.swift */,
+				8D2DEFA529F160E90049661C /* Login.swift */,
+				8D2DEFA329F160E90049661C /* Verification.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		8DEE94D229DAAF0000138417 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +148,7 @@
 		8DEE94DD29DAAF0000138417 /* Suno */ = {
 			isa = PBXGroup;
 			children = (
+				8D2DEFAE29F161F70049661C /* Info.plist */,
 				8DEE951E29DAE18000138417 /* src */,
 				8DEE94E229DAAF0100138417 /* Assets.xcassets */,
 				8DEE94E429DAAF0100138417 /* Suno.entitlements */,
@@ -151,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				8DEE951729DADA7F00138417 /* Bhajan.swift */,
+				8D2DEFAC29F161CA0049661C /* LoginViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,9 +195,9 @@
 		8DEE951629DADA6700138417 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8DEE951929DADB4300138417 /* ListView.swift */,
-				8DEE952029DAE23800138417 /* SignUp.swift */,
-				8DEE952229DAE38600138417 /* Home.swift */,
+				8D0FB3DC29F1706200FEE524 /* Home */,
+				8D0FB3DD29F1706F00FEE524 /* List */,
+				8D2DEFA229F160DE0049661C /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,6 +258,7 @@
 				8DEE950B29DAB3CD00138417 /* FirebaseAnalytics */,
 				8DEE950D29DAB3CD00138417 /* FirebaseAuth */,
 				8DEE950F29DAB3CD00138417 /* FirebaseFirestore */,
+				8D2DEFAA29F161900049661C /* SwiftUIX */,
 			);
 			productName = Suno;
 			productReference = 8DEE94DB29DAAF0000138417 /* Suno.app */;
@@ -296,6 +334,7 @@
 			mainGroup = 8DEE94D229DAAF0000138417;
 			packageReferences = (
 				8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8D2DEFA929F161900049661C /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 8DEE94DC29DAAF0000138417 /* Products */;
 			projectDirPath = "";
@@ -340,12 +379,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D2DEFA629F160E90049661C /* Verification.swift in Sources */,
+				8D2DEFA829F160E90049661C /* Login.swift in Sources */,
 				8DEE951A29DADB4300138417 /* ListView.swift in Sources */,
-				8DEE952129DAE23800138417 /* SignUp.swift in Sources */,
 				8DEE951D29DADDCA00138417 /* DataManager.swift in Sources */,
+				8D2DEFA729F160E90049661C /* Done.swift in Sources */,
 				8DEE952629DAE3A300138417 /* Extensions.swift in Sources */,
 				8DEE951829DADA7F00138417 /* Bhajan.swift in Sources */,
 				8DEE94DF29DAAF0000138417 /* SunoApp.swift in Sources */,
+				8D2DEFAD29F161CA0049661C /* LoginViewModel.swift in Sources */,
 				8DEE952329DAE38600138417 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +547,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Suno/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -543,6 +586,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Suno/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -700,6 +744,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8D2DEFA929F161900049661C /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
 		8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -711,6 +763,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8D2DEFAA29F161900049661C /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D2DEFA929F161900049661C /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
 		8DEE950B29DAB3CD00138417 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8DEE950A29DAB3CD00138417 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

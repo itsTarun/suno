@@ -9,19 +9,24 @@ import SwiftUI
 
 struct ListView: View {
     @EnvironmentObject var dataManager: DataManager
+    @AppStorage(UserDefaultKeys.isLoggedIn.rawValue) var isLogin: Bool = false
     
     var body: some View {
         NavigationView {
-            List(dataManager.bhajans, id: \.id) { allBhajan in
-                Text(allBhajan.name)
+            List(dataManager.bhajans, id: \.id) { bhajan in
+                NavigationLink {
+                    Text("Hello")
+                } label: {
+                    Text(bhajan.name)
+                }
             }
             .navigationTitle("Bhajans")
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
+                        isLogin = false
                     } label: {
-                        Image(systemName: "apple.logo")
+                        Image(systemName: "seal.fill")
                     }
                 }
             }
