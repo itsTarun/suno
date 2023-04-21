@@ -21,7 +21,7 @@ class GlobalVar: ObservableObject {
     @Published var currentSongTime = 0.0
 }
 
-struct Bhajan: Identifiable {
+struct Bhajan: Identifiable, Hashable {
     var id: String
     var image: String
     var url: String

@@ -28,15 +28,15 @@ struct PlayerView : View{
     @State var isAnimating = true
     @State var isShuffle : Bool = false
     @State var isRepeat : Bool = false
+    
     var foreverAnimation: Animation {
         Animation.linear(duration: 2.0)
             .repeatForever(autoreverses: false)
             .speed(0.3)
     }
     
-    
-    var body: some View{
-        ZStack{
+    var body: some View {
+        ZStack {
             AsyncImage(
                 url: album.imageURl,
                 placeholder: { Text("Loading ...") },
@@ -44,7 +44,7 @@ struct PlayerView : View{
             )
             .edgesIgnoringSafeArea(.all)
             BlurView(style: .dark).edgesIgnoringSafeArea(.all)
-            VStack{
+            VStack {
                 HStack {
                     HStack {
                         Image(systemName: "arrow.backward")
@@ -59,9 +59,11 @@ struct PlayerView : View{
                         presentation.wrappedValue.dismiss()
                     })
                     Spacer()
-                    Text(album.name).font(.custom("CircularStd-Bold", size: 15)).foregroundColor(.white).multilineTextAlignment(.center)
+                    Text(album.name).font(.body).foregroundColor(.white).multilineTextAlignment(.center)
                     Spacer()
                     //                    FontIcon.text(.materialIcon(code: .more_horiz), fontsize: 25, color: .white)
+                    Image(systemName: "ellipsis.curlybraces")
+                        .font(.body, weight: Font.Weight.bold)
                 }.padding(.top, 20).padding(.horizontal, 20).frame(maxWidth: .infinity)
                 
                 Spacer()
@@ -80,7 +82,7 @@ struct PlayerView : View{
                 Text(song.name).font(.headline).foregroundColor(.white).multilineTextAlignment(.center).padding(.horizontal, 10).padding(.top, 15)
                 Spacer()
                 
-                VStack{
+                VStack {
                     Slider(value: $slider){editing in
                         //                        player.currentItem?.seek(to: CMTimeMake(value: Int64(slider * Float(song.duration)), timescale: 1))
                         
@@ -95,7 +97,7 @@ struct PlayerView : View{
                 }.frame(maxWidth: .infinity).padding(.horizontal, 15)
                 
                 
-                ZStack{
+                ZStack {
                     Color.black.opacity(0.2).cornerRadius(20).shadow(radius: 10)
                     HStack{
                         //                        Button(action: self.shuffle, label: {
@@ -117,7 +119,6 @@ struct PlayerView : View{
                     
                     
                 }.edgesIgnoringSafeArea(.bottom).frame(height: 150, alignment: .center)
-                
             }
             
             
@@ -126,27 +127,26 @@ struct PlayerView : View{
                 timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
                     updateSlider()
                 }
-                //                if playerActive{
-                //                    global.isPlaying = false
-                //                    let url = URL(string: self.album.songs[currentIndex].file)
-                //                    player = AVPlayer(url: url!)
-                //                    player.play()
-                //                }
+                if playerActive {
+                    global.isPlaying = false
+                    let url = URL(string: self.album.songs[currentIndex].file)
+                    player = AVPlayer(url: url!)
+                    self.playPause()
+//                    player.play()
+                }
             }
     }
-    
-    
-    
-    func playPause(){
+    // MARK: - Play or Pause
+    func playPause() {
         self.global.isPlaying.toggle()
         self.isAnimating.toggle()
-        if global.isPlaying{
+        if global.isPlaying {
             player.pause()
-        }else{
+        } else {
             player.play()
         }
     }
-    
+    // MARK: - Next Song
     func next() {
         //        if self.isShuffle{
         //            var randomInt = Int.random(in: 0..<self.album.songs.count)
@@ -171,8 +171,8 @@ struct PlayerView : View{
         //            updateSlider()
         //        }
     }
-    
-    func previous(){
+    // MARK: - Previous Song
+    func previous() {
         //        self.song = self.album.songs[(currentIndex-1) % self.album.songs.count]
         //        global.currentSongName = self.album.songs[currentIndex].name
         //        let url = URL(string: self.album.songs[(currentIndex-1) % self.album.songs.count].file)
@@ -181,22 +181,20 @@ struct PlayerView : View{
         //        player.play()
         //        updateSlider()
     }
-    
-    func shuffle(){
+    // MARK: - Shuffle playlist
+    func shuffle() {
         self.isShuffle.toggle()
-        
     }
-    
-    func replay(){
+    // MARK: - Replay song or loop songs
+    func replay() {
         self.isRepeat.toggle()
     }
-    
-    
+    // MARK: - Update slider
     func updateSlider() {
         let currentSongDuration = Double(self.song.duration)
         let currentTimeInSeconds = CMTimeGetSeconds(player.currentTime())
         let currentTimeLeft = currentSongDuration - currentTimeInSeconds
-        if currentTimeInSeconds == currentSongDuration{
+        if currentTimeInSeconds == currentSongDuration {
             self.song = self.album.songs[(currentIndex+1) % self.album.songs.count]
             let url = URL(string: self.album.songs[(currentIndex+1) % self.album.songs.count].file)
             self.currentIndex += 1

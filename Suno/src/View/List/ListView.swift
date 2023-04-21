@@ -13,39 +13,53 @@ struct ListView: View {
     @State private var selectedSongItem: Bhajan?
     @StateObject var global = GlobalVar()
     @State private var showMiniPlayer = false
+    @State private var showLogoutAlert = false
     
     @AppStorage(UserDefaultKeys.isLoggedIn.rawValue) var isLogin: Bool = false
     
     var body: some View {
         NavigationView {
-            List(dataManager.bhajans, id: \.id) { song in
-                
-                NavigationLink {
+            VStack {
+                List(dataManager.bhajans, id: \.id) { song in
+                    NavigationLink {
+                        PlayerView(album: Album(name: song.name, image: song.image, songs: [Song(name: song.id, time: song.time, file: song.file, duration: song.duration)], year: ""), song: Song(name: song.id, time: song.time, file: song.file, duration: song.duration), slider: 0, timeLabelLeft: "", timeLabelRight: "", currentIndex: 0, playerActive: true)
+                            .environmentObject(global)
+                    } label: {
+                        HStack {
+                            Text(song.name)
+                                .font(.headline)
+                                .bold()
+                            AsyncImage(
+                                url: URL(string: song.image)!,
+                                placeholder: { Text("Loading ...") },
+                                image: { Image(uiImage: $0).resizable() }
+                            )
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 100, alignment: .center)
+                        }
+                    }
                     
-                    PlayerView(album: Album(name: song.name, image: song.image, songs: [Song(name: song.id, time: song.time, file: song.file, duration: song.duration)], year: ""), song: Song(name: song.id, time: song.time, file: song.file, duration: song.duration), slider: 0, timeLabelLeft: "", timeLabelRight: "", currentIndex: 0, playerActive: true)
-                        .environmentObject(global)
-                    
-                } label: {
-                    HStack {
-                        Text(song.name)
+                    if global.isMiniPlay {
+                        MiniPlayer()
                     }
                 }
-                
             }
-            if global.isMiniPlay {
-                MiniPlayer()
-            }
-        }
-        .navigationTitle("Bhajans")
-        .environmentObject(global)
-        .toolbar {
-            ToolbarItem {
-                Button {
-                    isLogin = false
-                } label: {
-                    Image(systemName: "seal.fill")
+            .navigationTitle("All Bhajans")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        showLogoutAlert.toggle()
+                    } label: {
+                        Image(systemName: "seal.fill")
+                    }
                 }
             }
+            .alert(isPresented: $showLogoutAlert, content: {
+                
+                Alert(title: Text("Are you sure, you want to logout?"), primaryButton: Alert.Button.default(Text("Okay")), secondaryButton: Alert.Button.destructive(Text("Yes"), action: {
+                    isLogin = false
+                }))
+            })
         }
     }
 }
@@ -60,7 +74,7 @@ struct MiniPlayer : View {
             ProgressView(value: global.currentSongTime, total: global.currentSongDuration)
                 .progressViewStyle(.linear)
                 .frame(maxHeight: .infinity, alignment: .top)
-                .tint(Color(UIColor(hexString: "#1DB954")))
+                .tint(Color.systemGreen)
             HStack{
                 Image(global.currentImage).resizable().frame(width: 30, height: 30, alignment: .center).clipped()
                 VStack(alignment: .leading){
@@ -90,7 +104,7 @@ struct MiniPlayer : View {
         
     }
     
-    func playPause(){
+    func playPause() {
         global.isPlaying.toggle()
         if global.isPlaying{
             player.pause()
@@ -100,34 +114,9 @@ struct MiniPlayer : View {
     }
 }
 
-
-
-extension UIColor {
-    convenience init(hexString: String) {
-        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int = UInt64()
-        Scanner(string: hex).scanHexInt64(&int)
-        let a, r, g, b: UInt64
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (255, 0, 0, 0)
-        }
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
-    }
-}
-
-
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            ListView()
-                .environmentObject(DataManager())
-        }
+        ListView()
+            .environmentObject(DataManager())
     }
 }

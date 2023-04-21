@@ -44,7 +44,8 @@ struct Login: View {
                             .foregroundColor(.label)
                             .frame(maxWidth: 60, maxHeight: .infinity)
                     })
-                    
+                    .background(Color.secondarySystemBackground)
+                    Spacer(minLength: 8)
                     TextField(text: $viewModel.phoneNumber)
                         .font(.title2)
                         .frame(maxHeight: .infinity)

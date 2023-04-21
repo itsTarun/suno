@@ -214,6 +214,6 @@ struct Verification: View {
 
 struct Verification_Previews: PreviewProvider {
     static var previews: some View {
-        Login()
+        Verification(viewModel: LoginViewModel())
     }
 }
