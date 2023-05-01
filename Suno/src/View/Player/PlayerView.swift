@@ -46,24 +46,28 @@ struct PlayerView : View{
             BlurView(style: .dark).edgesIgnoringSafeArea(.all)
             VStack {
                 HStack {
-                    HStack {
-                        Image(systemName: "arrow.backward")
-                            .font(.headline, weight: Font.Weight.bold)
-                        Spacer(minLength: 20)
-                    }.onTapGesture(perform: {
-                        global.isMiniPlay = true
-                        global.currentSongName = self.album.songs[currentIndex].name
-                        global.currentImage = self.album.image
-                        global.currentSongDuration = Double(self.song.duration)
-                        global.currentSongTime = CMTimeGetSeconds(player.currentTime())
-                        presentation.wrappedValue.dismiss()
-                    })
+                    Image(systemName: "arrow.backward")
+                        .font(.headline, weight: Font.Weight.bold)
+                        .onTapGesture(perform: {
+                            global.isMiniPlay = true
+                            global.currentSongName = self.album.songs[currentIndex].name
+                            global.currentImage = self.album.image
+                            global.currentSongDuration = Double(self.song.duration)
+                            global.currentSongTime = CMTimeGetSeconds(player.currentTime())
+                            presentation.wrappedValue.dismiss()
+                        })
+                    
                     Spacer()
                     Text(album.name).font(.body).foregroundColor(.white).multilineTextAlignment(.center)
                     Spacer()
                     //                    FontIcon.text(.materialIcon(code: .more_horiz), fontsize: 25, color: .white)
-                    Image(systemName: "ellipsis.curlybraces")
-                        .font(.body, weight: Font.Weight.bold)
+                    //                    Image(systemName: "ellipsis.curlybraces")
+                    //                        .font(.body, weight: Font.Weight.bold)
+                    
+                    Image(systemName: "arrow.backward")
+                        .font(.headline, weight: Font.Weight.bold)
+                        .opacity(0)
+                    
                 }.padding(.top, 20).padding(.horizontal, 20).frame(maxWidth: .infinity)
                 
                 Spacer()
@@ -120,21 +124,19 @@ struct PlayerView : View{
                     
                 }.edgesIgnoringSafeArea(.bottom).frame(height: 150, alignment: .center)
             }
-            
-            
-        }.navigationBarBackButtonHidden(true)
-            .onAppear(){
-                timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-                    updateSlider()
-                }
-                if playerActive {
-                    global.isPlaying = false
-                    let url = URL(string: self.album.songs[currentIndex].file)
-                    player = AVPlayer(url: url!)
-                    self.playPause()
-//                    player.play()
-                }
+        }
+        .onAppear(){
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                updateSlider()
             }
+            if playerActive {
+                global.isPlaying = false
+                let url = URL(string: self.album.songs[currentIndex].file)
+                player = AVPlayer(url: url!)
+                self.playPause()
+                //                    player.play()
+            }
+        }
     }
     // MARK: - Play or Pause
     func playPause() {
@@ -221,7 +223,6 @@ struct PlayerView : View{
         self.timeLabelLeft = "\(minsStr):\(secsStr)"
         self.timeLabelRight = "\(minsStrLeft):\(secsStrLeft)"
         self.slider = Float(currentTimeInSeconds)
-        
         
         if let currentItem = player.currentItem {
             let duration = currentItem.duration

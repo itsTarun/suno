@@ -18,33 +18,37 @@ struct ListView: View {
     @AppStorage(UserDefaultKeys.isLoggedIn.rawValue) var isLogin: Bool = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 List(dataManager.bhajans, id: \.id) { song in
-                    NavigationLink {
-                        PlayerView(album: Album(name: song.name, image: song.image, songs: [Song(name: song.id, time: song.time, file: song.file, duration: song.duration)], year: ""), song: Song(name: song.id, time: song.time, file: song.file, duration: song.duration), slider: 0, timeLabelLeft: "", timeLabelRight: "", currentIndex: 0, playerActive: true)
-                            .environmentObject(global)
-                    } label: {
+                    
+                    NavigationLink(value: song) {
+                        
                         HStack {
-                            Text(song.name)
-                                .font(.headline)
-                                .bold()
                             AsyncImage(
                                 url: URL(string: song.image)!,
                                 placeholder: { Text("Loading ...") },
                                 image: { Image(uiImage: $0).resizable() }
                             )
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: 100, alignment: .center)
+                            .scaledToFit()
+                            .frame(width: 100, height: 100, alignment: .leading)
+                            
+                            Text(song.name)
+                                .font(.headline)
+                                .bold()
                         }
                     }
                     
-                    if global.isMiniPlay {
-                        MiniPlayer()
-                    }
+                }
+                if global.isMiniPlay {
+                    MiniPlayer()
                 }
             }
+            .navigationDestination(for: Bhajan.self, destination: { song in
+                play(song)
+            })
             .navigationTitle("All Bhajans")
+            .listStyle(.grouped)
             .toolbar {
                 ToolbarItem {
                     Button {
@@ -61,13 +65,44 @@ struct ListView: View {
                 }))
             })
         }
+        .environmentObject(global)
+    }
+    
+    @ViewBuilder
+    func play(_ song: Bhajan) -> some View {
+        PlayerView(
+            album: Album(
+                name: song.name,
+                image: song.image,
+                songs: [
+                    Song(
+                        name: song.id,
+                        time: song.time,
+                        file: song.file,
+                        duration: song.duration
+                    )
+                ], year: ""
+            ),
+            song: Song(
+                name: song.id,
+                time: song.time,
+                file: song.file,
+                duration: song.duration
+            ),
+            slider: 0,
+            timeLabelLeft: "",
+            timeLabelRight: "",
+            currentIndex: 0,
+            playerActive: true
+        )
+        .navigationBarHidden(true)
     }
 }
 
 struct MiniPlayer : View {
     @EnvironmentObject var global : GlobalVar
     var body : some View {
-        ZStack{
+        ZStack {
             Color.black.opacity(0.2).cornerRadius(20).shadow(radius: 10)
             Image(global.currentImage).resizable().edgesIgnoringSafeArea(.all)
             BlurView(style: .dark).edgesIgnoringSafeArea(.all)
@@ -75,7 +110,7 @@ struct MiniPlayer : View {
                 .progressViewStyle(.linear)
                 .frame(maxHeight: .infinity, alignment: .top)
                 .tint(Color.systemGreen)
-            HStack{
+            HStack {
                 Image(global.currentImage).resizable().frame(width: 30, height: 30, alignment: .center).clipped()
                 VStack(alignment: .leading){
                     Text("\(global.currentSongName) currentSongName")
@@ -106,9 +141,9 @@ struct MiniPlayer : View {
     
     func playPause() {
         global.isPlaying.toggle()
-        if global.isPlaying{
+        if global.isPlaying {
             player.pause()
-        }else{
+        } else {
             player.play()
         }
     }
