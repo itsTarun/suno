@@ -25,7 +25,7 @@ struct PlayerView : View{
     @State var currentIndex: Int
     @State var playerActive : Bool
     
-    @State var isAnimating = true
+    @State var isAnimating = false
     @State var isShuffle : Bool = false
     @State var isRepeat : Bool = false
     
@@ -46,31 +46,43 @@ struct PlayerView : View{
             BlurView(style: .dark).edgesIgnoringSafeArea(.all)
             VStack {
                 HStack {
-                    Image(systemName: "arrow.backward")
-                        .font(.headline, weight: Font.Weight.bold)
-                        .onTapGesture(perform: {
-                            global.isMiniPlay = true
-                            global.currentSongName = self.album.songs[currentIndex].name
-                            global.currentImage = self.album.image
-                            global.currentSongDuration = Double(self.song.duration)
-                            global.currentSongTime = CMTimeGetSeconds(player.currentTime())
-                            presentation.wrappedValue.dismiss()
-                        })
+                    
+                    Button {
+                        global.isMiniPlay = true
+                        global.currentSongName = self.album.songs[currentIndex].name
+                        global.currentImage = self.album.image
+                        global.currentSongDuration = Double(self.song.duration)
+                        global.currentSongTime = CMTimeGetSeconds(player.currentTime())
+                        presentation.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "arrow.backward")
+                            .tint(.blue)
+                            .font(.headline, weight: .bold)
+                    }
                     
                     Spacer()
+                    
                     Text(album.name).font(.body).foregroundColor(.white).multilineTextAlignment(.center)
+                    
                     Spacer()
-                    //                    FontIcon.text(.materialIcon(code: .more_horiz), fontsize: 25, color: .white)
-                    //                    Image(systemName: "ellipsis.curlybraces")
-                    //                        .font(.body, weight: Font.Weight.bold)
                     
-                    Image(systemName: "arrow.backward")
-                        .font(.headline, weight: Font.Weight.bold)
-                        .opacity(0)
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "arrow.backward")
+                            .tint(.blue)
+                            .font(.headline, weight: .bold)
+                            .opacity(0)
+                    }
+                    .disabled(true)
                     
-                }.padding(.top, 20).padding(.horizontal, 20).frame(maxWidth: .infinity)
+                }
+                .padding(.top, 20)
+                .padding(.horizontal, 20)
+                .frame(maxWidth: .infinity)
                 
                 Spacer()
+                
                 AsyncImage(
                     url: album.imageURl,
                     placeholder: { Text("Loading ...") },
@@ -82,46 +94,52 @@ struct PlayerView : View{
                 .shadow(color: .white, radius: 10)
                 .rotationEffect(Angle(degrees: self.isAnimating ? 360.0 : 0.0))
                 .animation(self.isAnimating ? foreverAnimation : .default)
-                .onAppear{self.isAnimating = true}
-                Text(song.name).font(.headline).foregroundColor(.white).multilineTextAlignment(.center).padding(.horizontal, 10).padding(.top, 15)
+                .onAppear{ self.isAnimating = true }
+                
+                Text(song.name)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 10)
+                    .padding(.top, 15)
+                
                 Spacer()
                 
                 VStack {
-                    Slider(value: $slider){editing in
-                        //                        player.currentItem?.seek(to: CMTimeMake(value: Int64(slider * Float(song.duration)), timescale: 1))
-                        
+                    Slider(value: $slider){ editing in
+                        let time = CMTimeMake(value: Int64(slider * Float(song.duration)), timescale: 1)
+                        player.currentItem?.seek(
+                            to: time,
+                            completionHandler: { _ in
+                            print("time", time)
+                        }) //.seek(to: )
                     }
                     
                     HStack{
-                        Text(self.timeLabelLeft).font(.custom("CircularStd-Medium", size: 12)).foregroundColor(.white)
+                        Text(self.timeLabelLeft)
+                            .font(.body)
+                            .foregroundColor(.white)
                         Spacer()
-                        Text(self.timeLabelRight).font(.custom("CircularStd-Medium", size: 12)).foregroundColor(.white)
+                        Text(self.timeLabelRight)
+                            .font(.body)
+                            .foregroundColor(.white)
                     }
                     
                 }.frame(maxWidth: .infinity).padding(.horizontal, 15)
                 
                 
                 ZStack {
-                    Color.black.opacity(0.2).cornerRadius(20).shadow(radius: 10)
-                    HStack{
-                        //                        Button(action: self.shuffle, label: {
-                        //                            Image(systemName: "shuffle.circle.fill").resizable()
-                        //                        }).frame(width: 40, height: 40, alignment: .center).padding(.trailing, 15).foregroundColor(isShuffle ? .blue : .white)
-                        //                        Button(action: self.previous, label: {
-                        //                            Image(systemName: "backward.end.circle.fill").resizable()
-                        //                        }).frame(width: 40, height: 40, alignment: .center).foregroundColor(.white).padding(.trailing, 15)
+                    BlurView()
+                        .cornerRadius(20)
+                        .shadow(radius: 10)
+                    
+                    HStack {
+                        
                         Button(action: self.playPause, label: {
                             Image(systemName: global.isPlaying ? "play.circle.fill" : "pause.circle.fill").resizable()
                         }).frame(width: 60, height: 60, alignment: .center).foregroundColor(.white)
-                        //                        Button(action: self.next, label: {
-                        //                            Image(systemName: "forward.end.circle.fill").resizable()
-                        //                        }).frame(width: 40, height: 40, alignment: .center).foregroundColor(.white).padding(.leading, 15)
-                        //                        Button(action: self.replay, label: {
-                        //                            Image(systemName: "repeat.circle.fill").resizable()
-                        //                        }).frame(width: 40, height: 40, alignment: .center).padding(.leading, 15).foregroundColor(isRepeat ? .blue : .white)
+                        
                     }
-                    
-                    
                 }.edgesIgnoringSafeArea(.bottom).frame(height: 150, alignment: .center)
             }
         }
@@ -134,7 +152,6 @@ struct PlayerView : View{
                 let url = URL(string: self.album.songs[currentIndex].file)
                 player = AVPlayer(url: url!)
                 self.playPause()
-                //                    player.play()
             }
         }
     }
@@ -197,12 +214,13 @@ struct PlayerView : View{
         let currentTimeInSeconds = CMTimeGetSeconds(player.currentTime())
         let currentTimeLeft = currentSongDuration - currentTimeInSeconds
         if currentTimeInSeconds == currentSongDuration {
-            self.song = self.album.songs[(currentIndex+1) % self.album.songs.count]
-            let url = URL(string: self.album.songs[(currentIndex+1) % self.album.songs.count].file)
-            self.currentIndex += 1
-            player = AVPlayer(url: url!)
-            player.play()
-            updateSlider()
+            // play next song
+//            self.song = self.album.songs[(currentIndex+1) % self.album.songs.count]
+//            let url = URL(string: self.album.songs[(currentIndex+1) % self.album.songs.count].file)
+//            self.currentIndex += 1
+//            player = AVPlayer(url: url!)
+//            player.play()
+//            updateSlider()
         }
         
         let mins = currentTimeInSeconds / 60
