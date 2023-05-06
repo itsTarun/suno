@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseStorage
 
 class DataManager: ObservableObject {
     @Published var bhajans: [Bhajan] = []
@@ -37,8 +38,32 @@ class DataManager: ObservableObject {
                     let duration = data["duration"] as? Int ?? 0
                     let year = data["year"] as? String ?? "2023"
                     
-                    let bhajan = Bhajan(id: id, image: image, url: url, lrc: lrc, name: name, time: time, file: url, duration: duration, year: year)
+                    // Get a reference to the storage service using the default Firebase App
+                    let storage = Storage.storage()
+                    
+                    // Create a storage reference from our storage service
+                    let storageRef = storage.reference()
+                    
+                    // Create a reference to the file you want to download
+                    let starsRef = storageRef.child("Hindu God Images/Ganesh/Ganesh.jpeg")
+                    
+                    
+                    let bhajan = Bhajan(id: id, image: staticImageURL, url: url, lrc: lrc, name: name, time: time, file: url, duration: duration, year: year)
+                    
                     self.bhajans.append(bhajan)
+                    
+                    //                    // Fetch the download URL
+                    //                    starsRef.downloadURL { storageURL, error in
+                    //                        var bhajan = Bhajan(id: id, image: image, url: url, lrc: lrc, name: name, time: time, file: url, duration: duration, year: year)
+                    //                        if let error = error {
+                    //                            // Handle any errors
+                    //                            print("⚠️ error", error.localizedDescription)
+                    //                        } else {
+                    //                            // Get the download URL for 'images/stars.jpg'
+                    //                            bhajan.image = storageURL?.absoluteString ?? image
+                    //                        }
+                    //                        self.bhajans.append(bhajan)
+                    //                    }
                 }
             }
         }

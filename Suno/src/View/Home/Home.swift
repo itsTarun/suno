@@ -12,7 +12,8 @@ struct Home: View {
     @EnvironmentObject var dataManager: DataManager
     var body: some View {
         if isLogin {
-            ListView()
+            AppTabBarView()
+            // ListView()
                 .environmentObject(dataManager)
         } else {
             Login()
