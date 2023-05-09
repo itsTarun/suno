@@ -21,7 +21,7 @@ struct CustomNavLink<Label, Destination>: View where Label: View, Destination: V
             CustomNavBarContainerView {
                 destination
             }
-            .toolbar(.hidden) // .navigationBarHidden(true)
+            .toolbar(.hidden)
         } label: {
             label
         }

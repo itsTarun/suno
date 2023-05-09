@@ -12,11 +12,11 @@ struct ListCell: View {
     var body: some View {
         VStack {
             AsyncImage(
-                url: URL(string: bhajan.image)!,
+                url: bhajan.image,
                 placeholder: { BlurView() },
                 image: { Image(uiImage: $0).resizable() }
             )
-            .scaledToFit()
+            .scaledToFill()
         }
     }
 }

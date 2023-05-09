@@ -32,8 +32,10 @@ struct AppTabBarView: View {
                 Color.green
                     .tabBarItem(tab: .profile, selection: $tabSelection)
             }
-            
-            MiniPlayerView(animation: animation, expand: $miniPlayerExpand)
+            // PlayerView
+            PlayerView(
+                expand: $miniPlayerExpand, animation: animation
+            )
         }
     }
 }

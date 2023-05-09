@@ -14,18 +14,18 @@ enum UserDefaultKeys: String {
     case verificationId = "verificationId"
 }
 
-class GlobalVar: ObservableObject {
-    @Published var isPlaying = false
-    @Published var currentSongName = ""
-    @Published var currentImage = ""
-    @Published var isMiniPlay = false
-    @Published var currentSongDuration = 0.0
-    @Published var currentSongTime = 0.0
-}
+//class GlobalVar: ObservableObject {
+//    @Published var isPlaying = false
+//    @Published var currentSongName = ""
+//    @Published var currentImage = ""
+//    @Published var isMiniPlay = false
+//    @Published var currentSongDuration = 0.0
+//    @Published var currentSongTime = 0.0
+//}
 
 struct Bhajan: Identifiable, Hashable {
     var id: String
-    var image: String
+    var image: URL
     var url: String
     var lrc: String
     var name: String
@@ -38,7 +38,7 @@ struct Bhajan: Identifiable, Hashable {
 extension Bhajan {
     init() {
         self.id = ""
-        self.image = staticImageURL
+        self.image = URL(string: staticImageURL)!
         self.url = ""
         self.lrc = ""
         self.name = "Ganesh Ji"
@@ -48,22 +48,22 @@ extension Bhajan {
         self.year = ""
     }
 }
-
-struct Album : Hashable{
-    var id = UUID()
-    var name : String
-    var image : String
-    var songs : [Song]
-    var year : String
-    var imageURl: URL {
-        return URL(string: self.image)!
-    }
-}
-
-struct Song : Hashable{
-    var id = UUID()
-    var name : String
-    var time : String
-    var file : String
-    var duration : Int
-}
+//
+//struct Album : Hashable{
+//    var id = UUID()
+//    var name : String
+//    var image : String
+//    var songs : [Song]
+//    var year : String
+//    var imageURl: URL {
+//        return URL(string: self.image)!
+//    }
+//}
+//
+//struct Song : Hashable{
+//    var id = UUID()
+//    var name : String
+//    var time : String
+//    var file : String
+//    var duration : Int
+//}

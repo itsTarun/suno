@@ -51,6 +51,7 @@ extension CustomNavBarView {
                 .fontWeight(.semibold)
             if let subtitle = subtitle {
                 Text(subtitle)
+                    .multilineTextAlignment(.center)
             }
         }
     }
