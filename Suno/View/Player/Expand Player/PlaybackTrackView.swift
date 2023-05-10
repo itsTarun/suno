@@ -3,6 +3,7 @@
 import SwiftUI
 
 struct PlaybackTrackView: View {
+    var playButtonCallBack: () -> Void
     var body: some View {
         HStack {
             Button {} label: {
@@ -11,7 +12,9 @@ struct PlaybackTrackView: View {
                     .font(.largeTitle)
             }
             Spacer()
-            Button {} label: {
+            Button {
+                playButtonCallBack()
+            } label: {
                 Image(systemName: Images.iconPlay)
                     .foregroundColor(.primary)
                     .font(.largeTitle)
@@ -37,6 +40,6 @@ fileprivate enum Images {
 
 struct PlaybackTrackView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaybackTrackView()
+        PlaybackTrackView(playButtonCallBack: { })
     }
 }

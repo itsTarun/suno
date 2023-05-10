@@ -15,12 +15,13 @@ struct ExpandPlayer: View {
                     ExpandPlayerHeaderView(goBack: $expand)
                     ExpandPlayerImageView()
                     ExpandPlayerSongInfoView()
-                    
                 }
                 
                 Group {
                     TimeTrackView()
-                    PlaybackTrackView()
+                    PlaybackTrackView(playButtonCallBack: {
+                        print("Play/Pause")
+                    })
                     
                     BottomPanel(showLyrcisButtonClicked: {
                         showLyrics.toggle()
@@ -33,6 +34,7 @@ struct ExpandPlayer: View {
                     Spacer(minLength: 20)
                 }
             }
+            .onAppear()
             .ignoresSafeArea()
         }
     }
